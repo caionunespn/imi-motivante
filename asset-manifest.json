@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/imi-motivante/static/css/main.4b849351.css",
+    "main.js": "/imi-motivante/static/js/main.d6bb738a.js",
+    "index.html": "/imi-motivante/index.html",
+    "main.4b849351.css.map": "/imi-motivante/static/css/main.4b849351.css.map",
+    "main.d6bb738a.js.map": "/imi-motivante/static/js/main.d6bb738a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b849351.css",
+    "static/js/main.d6bb738a.js"
+  ]
+}
