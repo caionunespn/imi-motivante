@@ -1,0 +1,9 @@
+span {
+    color: red;
+}
+
+.form-wrapper {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 24px;
+}
