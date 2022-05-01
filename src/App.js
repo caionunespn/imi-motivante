@@ -45,6 +45,7 @@ function App() {
       await newAnswer({
         ...payload,
         tipo: 'motivante',
+        createdAt: new Date(),
       });
       setStep(6);
     } catch (err) {
