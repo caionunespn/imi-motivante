@@ -46,7 +46,7 @@ function App() {
         ...payload,
         tipo: 'motivante',
       });
-      setLoading(false);
+      setStep(6);
     } catch (err) {
       toast.error(err.message);
       setLoading(false);
