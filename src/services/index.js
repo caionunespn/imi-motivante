@@ -6,7 +6,11 @@ const provider = Axios.create({
 
 export const newAnswer = async (payload) => {
     try {
-        await provider.post('resposta', payload);
+        await provider.post('resposta', payload, {
+            headers: {
+                Authorization: 'Bearer J7Td9Uj3JDbkq5TPR52jwDcCiQFQYoXY'
+            }
+        });
     } catch (err) {
         throw Error('Ocorreu um erro ao tentar enviar o formulário, por favor, tente enviá-lo novamente');
     }
