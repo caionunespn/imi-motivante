@@ -83,7 +83,7 @@ function IMI({previousStep, changeData, task, loading}) {
     for (let i = 0; i < randomOrderValues.length; i++) {
       const value = randomOrderValues[i];
       if (value === null) {
-        toast.error(`Por favor, responda a pergunta ${i+1}: "${randomOrder[i]}"`);
+        toast.error(`Por favor, responda a pergunta: "${randomOrder[i]}"`);
         valid = false;
         break;
       }
@@ -105,7 +105,7 @@ function IMI({previousStep, changeData, task, loading}) {
         const question = randomOrder[i];
         data = {
           ...data,
-          [`${i+1} - ${question}`]: randomOrderValues[i]
+          [question]: randomOrderValues[i]
         }
       }
 

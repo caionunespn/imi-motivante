@@ -42,7 +42,7 @@ function Intro({previousStep, nextStep, changeData, initialState}) {
     for (let i = 0; i < values.length; i++) {
       const value = values[i];
       if (value === null) {
-        toast.error(`Por favor, responda a pergunta ${i+1}: "${questions[i]}"`);
+        toast.error(`Por favor, responda a pergunta "${questions[i]}"`);
         valid = false;
         break;
       }
@@ -78,14 +78,14 @@ function Intro({previousStep, nextStep, changeData, initialState}) {
         <h3>Intrinsic Motivation Inventory Task Evaluation Questionnaire (IMI-TEQ) - Experiências Motivantes</h3>
         <p>Prezado(a) colaborador(a),</p>
         <p>Somos pesquisadores da Universidade Federal do Ceará e estamos conduzindo um estudo para validar a tradução para o português brasileiro do questionário Intrinsic Motivation Inventory Task Evaluation Questionnaire (IMI-TEQ).</p>
-        <p>Para efetivação do estudo, gostaríamos de contar com sua colaboração respondendo a este formulário, que dura em torno de 30 minutos.</p>
-        <p>Antes de continuar, é importante esclarecer as seguintes informações sobre a pesquisa:</p>
+        <p>Para efetivação do estudo, gostaríamos de contar com sua colaboração respondendo a este formulário, que dura em torno de 15 minutos.</p>
+        <p><b>Antes de continuar, é importante esclarecer as seguintes informações sobre a pesquisa:</b></p>
         <p>- Sua participação no estudo é totalmente voluntária e, portanto, você não é obrigado a fornecer as informações e/ou colaborar com as atividades solicitadas pelos pesquisadores, podendo, a qualquer momento, desistir do mesmo.</p>
         <p>- As respostas coletadas são de caráter anônimo e confidencial.</p>
-        <p>Por fim, nos colocamos à disposição para quaisquer dúvidas através do email: caioeduardo@alu.ufc.br.</p>
-        <p>Atenciosamente,</p>
-        <p>Profa. Dra. Ticianne Darin</p>
-        <p>Caio Eduardo Pereira Nunes</p>
+        <p>Por fim, nos colocamos à disposição para quaisquer dúvidas através do email: <b>caioeduardo@alu.ufc.br</b>.</p>
+        <p><b>Atenciosamente,</b></p>
+        <p><b>Profa. Dra. Ticianne Darin</b></p>
+        <p><b>Caio Eduardo Pereira Nunes</b></p>
         <br />
         <br />
         {questions.map((question, index) => (

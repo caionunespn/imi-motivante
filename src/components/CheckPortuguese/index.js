@@ -44,7 +44,7 @@ function CheckPortuguese({previousStep, nextStep, changeData, initialState}) {
     for (let i = 0; i < values.length; i++) {
       const value = values[i];
       if (value === null) {
-        toast.error(`Por favor, responda a pergunta ${i+1}: "${questions[i]}"`);
+        toast.error(`Por favor, responda a pergunta: "${questions[i]}"`);
         valid = false;
         break;
       }

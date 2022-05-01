@@ -56,13 +56,13 @@ function TCLE({previousStep, nextStep, changeData, initialState}) {
   function validateData() {
     let valid = true;
     if (textInputs.nome.trim() === '') {
-        toast.error(`Por favor, responda a pergunta 1: "Nome"`);
+        toast.error(`Por favor, responda a pergunta: "Nome"`);
         valid = false;
     } else if (textInputs.idade.trim() === '') {
-        toast.error(`Por favor, responda a pergunta 2: "Idade"`);
+        toast.error(`Por favor, responda a pergunta: "Idade"`);
         valid = false;
     } else if (textInputs.rg.trim() === '') {
-        toast.error(`Por favor, responda a pergunta 3: "RG"`);
+        toast.error(`Por favor, responda a pergunta: "RG"`);
         valid = false;
     } else {
         try {
@@ -80,7 +80,7 @@ function TCLE({previousStep, nextStep, changeData, initialState}) {
     for (let i = 0; i < values.length; i++) {
       const value = values[i];
       if (value === null) {
-        toast.error(`Por favor, responda a pergunta ${i+4}: "${questions[i]}"`);
+        toast.error(`Por favor, responda a pergunta: "${questions[i]}"`);
         valid = false;
         break;
       }
@@ -116,19 +116,23 @@ function TCLE({previousStep, nextStep, changeData, initialState}) {
   return (
     <div>
         <h3>Termo de Consentimento Livre e Esclarecido -  Intrinsic Motivation Inventory Task Evaluation Questionnaire (IMI-TEQ)</h3>
-        <p>Eu estou sendo convidado a participar do estudo denominado "Validação da tradução do questionário Intrinsic Motivation Inventory (IMI) Task Evaluation Questionnaire para o português brasileiro", cujos objetivos e justificativas são: validar a tradução do questionário Intrinsic Motivation Inventory Task Evaluation Questionnaire (IMI-TEQ) para a língua portuguesa e sua adaptação transcultural ao contexto brasileiro. O IMI é um questionário produzido e validado na língua inglesa e é usado em diversas pesquisas de diferentes áreas (ex. educação, saúde, tecnologia) para medir a motivação intrínseca, explicada pela teoria da autodeterminação como sendo comportamentos que são motivados pelo interesse da pessoa, apenas pelo sentimento de satisfação. O IMI-TEQ é uma versão menor do questionário IMI, com 22 itens, usado principalmente para medir a motivação intrínseca e auto-regulação em tarefas genéricas. A tradução e validação do IMI-TEQ para pesquisas no Brasil é necessária visto que a utilização de questionários em diferentes idiomas pode comprometer a validade de pesquisas científicas. Na falta de questionários traduzidos validados, os pesquisadores criam traduções livres, o que pode levar a inconsistências e perda de validade dos resultados.</p>
-        <p>A minha participação no referido estudo será no sentido de fornecer sugestões e opiniões acerca da compreensão dos itens do IMI-TEQ traduzidos para o português brasileiro. Para isso, eu fornecerei dados sociodemográficos (ex. idade, escolaridade, gênero, ocupação), descreverei uma experiência à minha escolha com um produto digital que considerei motivadora ou desmotivadora, avaliarei a experiência descrita utilizando o IMI-TEQ traduzido,  responderei a um questionário para medir a minha compreensão acerca dos itens do questionário IMI-TEQ traduzido e, por fim, participarei de uma entrevista para fornecer impressões sobre palavras, frases ou expressões utilizadas na tradução. O tempo estimado para a participação da pesquisa é em torno de 20 minutos.</p>
-        <p>Fui alertado de que, da pesquisa a se realizar, posso esperar alguns benefícios, tais como: </p>
+        <p>Eu estou sendo convidado a participar do estudo denominado <b>"Validação da tradução do questionário Intrinsic Motivation Inventory (IMI) Task Evaluation Questionnaire para o português brasileiro"</b>, cujos objetivos e justificativas são:</p>
+        <p><b>Validar a tradução do questionário Intrinsic Motivation Inventory Task Evaluation Questionnaire (IMI-TEQ) para a língua portuguesa e sua adaptação transcultural ao contexto brasileiro.</b></p>
+        <p>O IMI é um questionário produzido e validado na língua inglesa e é usado em diversas pesquisas de diferentes áreas (ex. educação, saúde, tecnologia) para medir a motivação intrínseca, explicada pela teoria da autodeterminação como sendo comportamentos que são motivados pelo interesse da pessoa, apenas pelo sentimento de satisfação. O IMI-TEQ é uma versão menor do questionário IMI, com 22 itens, usado principalmente para medir a motivação intrínseca e auto-regulação em tarefas genéricas. A tradução e validação do IMI-TEQ para pesquisas no Brasil é necessária visto que a utilização de questionários em diferentes idiomas pode comprometer a validade de pesquisas científicas. Na falta de questionários traduzidos validados, os pesquisadores criam traduções livres, o que pode levar a inconsistências e perda de validade dos resultados.</p>
+        <p><b>A minha participação no referido estudo será no sentido de fornecer dados para validação estatística do questionário IMI-TEQ traduzido para o português brasileiro. Para isso, eu fornecerei:</b></p>
+        <p>- Dados sociodemográficos (ex. idade, escolaridade, gênero, ocupação)</p>
+        <p>- Descreverei uma experiência à minha escolha com um jogo digital que considerei motivante; e</p>
+        <p>- Avaliarei a experiência descrita utilizando o IMI-TEQ traduzido.</p>
+        <p><b>Fui alertado de que, da pesquisa a se realizar, posso esperar alguns benefícios, tais como:</b></p>
         <p>- Contribuir com a ciência, ajudando na melhoria e validação de um instrumento para a comunidade de pesquisa brasileira, que pode ser utilizado em diversas áreas, como educação, saúde e tecnologia, para medir conceitos relacionados à teoria da autodeterminação (motivação intrínseca e auto-regulação).</p>
         <p>- Fomentar o desenvolvimento de pesquisas e produtos que, utilizando o IMI-TEQ traduzido, serão criados levando em consideração fatores que motivam e engajam seu público-alvo, inclusive, potencialmente, a mim.</p>
-        <p>Recebi, por outro lado, os esclarecimentos necessários sobre os possíveis desconfortos e riscos decorrentes do estudo, levando-se em conta que é uma pesquisa, e os resultados positivos ou negativos somente serão obtidos após a sua realização. Os possíveis riscos durante este processo são:</p>
+        <p><b>Recebi, por outro lado, os esclarecimentos necessários sobre os possíveis desconfortos e riscos decorrentes do estudo, levando-se em conta que é uma pesquisa, e os resultados positivos ou negativos somente serão obtidos após a sua realização. Os possíveis riscos durante este processo são:</b></p>
         <p>- Cansaço ou aborrecimento ao responder os questionários;</p>
         <p>- Cansaço ou vergonha ao responder às perguntas;</p>
-        <p>- Constrangimento ao expor a opinião durante a realização das entrevistas;</p>
-        <p>- Desconforto, constrangimento ou alterações de comportamento durante gravações de áudio e vídeo;</p>
-        <p>- Possibilidade de constrangimento ao responder o instrumento de coleta de dados; Medo de não saber responder ou de ser identificado.</p>
-        <p>Estou ciente de que minha privacidade será respeitada, ou seja, meu nome ou qualquer outro dado ou elemento que possa, de qualquer forma, me identificar, será mantido em sigilo.</p>
-        <p>Também fui informado de que posso me recusar a participar do estudo, ou retirar meu consentimento a qualquer momento, sem precisar justificar, e de, por desejar sair da pesquisa, não sofrerei qualquer prejuízo à assistência que venho recebendo.</p>
+        <p>- Possibilidade de constrangimento ao responder o instrumento de coleta de dados</p>
+        <p>- Medo de não saber responder ou de ser identificado.</p>
+        <p><b>Estou ciente de que minha privacidade será respeitada, ou seja, meu nome ou qualquer outro dado ou elemento que possa, de qualquer forma, me identificar, será mantido em sigilo.</b></p>
+        <p><b>Também fui informado de que posso me recusar a participar do estudo, ou retirar meu consentimento a qualquer momento, sem precisar justificar, e de, por desejar sair da pesquisa, não sofrerei qualquer prejuízo à assistência que venho recebendo.</b></p>
         <br />
         <p><b>Endereço dos responsáveis pela pesquisa:</b></p>
         <div className="small-texts">
@@ -142,30 +146,30 @@ function TCLE({previousStep, nextStep, changeData, initialState}) {
         <br />
         <FormGroup>
             <Label for="nome">
-            1. Nome <span>*</span>
+            <b>1. Nome <span>*</span></b>
             </Label>
             <Input id="nome" value={textInputs.nome} onChange={({currentTarget}) => handleChangeInput('nome', currentTarget.value)} />
         </FormGroup>
         <br />
         <FormGroup>
             <Label for="idade">
-            2. Idade <span>*</span>
+            <b>2. Idade <span>*</span></b>
             </Label>
             <Input id="idade" value={textInputs.idade} onChange={({currentTarget}) => handleChangeInput('idade', currentTarget.value)} />
         </FormGroup>
         <br />
         <FormGroup>
             <Label for="rg">
-            2. RG <span>*</span>
+            <b>3. RG <span>*</span></b>
             </Label>
             <Input id="rg" value={textInputs.rg} onChange={({currentTarget}) => handleChangeInput('rg', currentTarget.value)} />
         </FormGroup>
         <br />
-        <p>Eu declaro que é de livre e espontânea vontade que estou como participante de uma pesquisa. Eu declaro que li cuidadosamente este Termo de Consentimento Livre e Esclarecido e que, após sua leitura, tive a oportunidade de fazer perguntas sobre o seu conteúdo, como também sobre a pesquisa, e recebi explicações que responderam por completo minhas dúvidas. E declaro, ainda, estar recebendo uma via assinada deste termo.</p>
+        <p><b>Eu declaro que é de livre e espontânea vontade que estou como participante de uma pesquisa. Eu declaro que li cuidadosamente este Termo de Consentimento Livre e Esclarecido e que, após sua leitura, tive a oportunidade de fazer perguntas sobre o seu conteúdo, como também sobre a pesquisa, e recebi explicações que responderam por completo minhas dúvidas. E declaro, ainda, estar recebendo uma via assinada deste termo.</b></p>
         {questions.map((question, index) => (
           <ChoiceQuestion
             key={index}
-            number={index+3}
+            number={index+4}
             question={question}
             values={options[index]}
             currentValue={values[index]}

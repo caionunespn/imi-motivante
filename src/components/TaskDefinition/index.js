@@ -53,10 +53,10 @@ function TaskDefinition({previousStep, nextStep, changeData, initialState}) {
   function validateData() {
     let valid = true;
     if (textInputs.jogo.trim() === '') {
-        toast.error(`Por favor, responda a pergunta 1: "Qual jogo digital você vai considerar?"`);
+        toast.error(`Por favor, responda a pergunta: "Qual jogo digital você vai considerar?"`);
         valid = false;
     } else if (textInputs.tarefa.trim() === '') {
-        toast.error(`Por favor, responda a pergunta 2: "Qual tarefa nesse jogo você vai considerar?"`);
+        toast.error(`Por favor, responda a pergunta: "Qual tarefa nesse jogo você vai considerar?"`);
         valid = false;
     }
     if (!valid) return false;
@@ -64,7 +64,7 @@ function TaskDefinition({previousStep, nextStep, changeData, initialState}) {
     for (let i = 0; i < values.length; i++) {
       const value = values[i];
       if (value === null) {
-        toast.error(`Por favor, responda a pergunta ${i+3}: "${questions[i]}"`);
+        toast.error(`Por favor, responda a pergunta: "${questions[i]}"`);
         valid = false;
         break;
       }
@@ -104,10 +104,9 @@ function TaskDefinition({previousStep, nextStep, changeData, initialState}) {
         <p>Pensou? Agora pense numa tarefa que, durante o uso desse jogo, te fez considerar a experiência desta forma.</p>
         <p>Calma que posso te dar um exemplo! Vamos supor que uma pessoa goste da franquia Mario ou goste de jogar coisas que a desafiam. Neste cenário, um exemplo de tarefa que pode ser considerada motivante para essa pessoa é: "Terminar a primeira fase do jogo Super Mario World sem ser atacado por nenhum inimigo".</p>
         <br />
-        <br />
         <FormGroup>
             <Label for="jogo">
-            1. Qual jogo digital você vai considerar? <span>*</span>
+            <b>1. Qual jogo digital você vai considerar? <span>*</span></b>
             </Label>
             <Input id="jogo" value={textInputs.jogo} onChange={({currentTarget}) => handleChangeInput('jogo', currentTarget.value)} />
         </FormGroup>
@@ -115,7 +114,7 @@ function TaskDefinition({previousStep, nextStep, changeData, initialState}) {
 
         <FormGroup>
             <Label for="tarefa">
-            2. Qual tarefa neste jogo você vai considerar? <span>*</span>
+            <b>2. Qual tarefa neste jogo você vai considerar? <span>*</span></b>
             </Label>
             <Input id="tarefa" value={textInputs.tarefa} onChange={({currentTarget}) => handleChangeInput('tarefa', currentTarget.value)} />
         </FormGroup>

@@ -77,7 +77,7 @@ function Socio({previousStep, nextStep, checkPortuguese, changeData, initialStat
   function validateData() {
     let valid = true;
     if (age.trim() === '') {
-      toast.error(`Por favor, responda a pergunta 1: "Que ano você nasceu?"`);
+      toast.error(`Por favor, responda a pergunta: "Que ano você nasceu?"`);
       valid = false;
     } else {
       try {
@@ -100,7 +100,7 @@ function Socio({previousStep, nextStep, checkPortuguese, changeData, initialStat
     for (let i = 0; i < values.length; i++) {
       const value = values[i];
       if (value === null) {
-        toast.error(`Por favor, responda a pergunta ${i+1}: "${questions[i]}"`);
+        toast.error(`Por favor, responda a pergunta: "${questions[i]}"`);
         valid = false;
         break;
       }
@@ -144,7 +144,7 @@ function Socio({previousStep, nextStep, checkPortuguese, changeData, initialStat
         <br />
         <FormGroup>
             <Label for="idade">
-            1. Que ano você nasceu? <span>*</span>
+            <b>1. Que ano você nasceu? <span>*</span></b>
             </Label>
             <Input id="idade" value={age} onChange={({currentTarget}) => setAge(currentTarget.value)} />
         </FormGroup>
