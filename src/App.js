@@ -24,6 +24,7 @@ function App() {
     taskDefinition: {},
     imi: {},
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (Object.keys(payload.imi).length > 0) {
@@ -39,13 +40,16 @@ function App() {
   }
 
   async function handleSubmit() {
+    setLoading(true);
     try {
       await newAnswer({
         ...payload,
         tipo: 'motivante',
       });
+      setLoading(false);
     } catch (err) {
       toast.error(err.message);
+      setLoading(false);
     }
   }
 
@@ -60,7 +64,7 @@ function App() {
       case 4:
         return (<TaskDefinition previousStep={(payload.portugueseCheck && payload.socio['Em qual região do país você reside?'] === 'Não moro no Brasil') ? () => setStep(7) : () => setStep(3)} nextStep={() => setStep(5)} changeData={(data) => handleChangePayload('taskDefinition', data)} initialState={payload.taskDefinition} />)
       case 5:
-        return (<IMI previousStep={() => setStep(4)} changeData={(data) => handleChangePayload('imi', data)} task={payload.taskDefinition ? payload.taskDefinition.tarefa : null} />)
+        return (<IMI previousStep={() => setStep(4)} changeData={(data) => handleChangePayload('imi', data)} task={payload.taskDefinition ? payload.taskDefinition.tarefa : null} loading={loading} />)
       case 6:
         return (<Thanks />)
       case 7:

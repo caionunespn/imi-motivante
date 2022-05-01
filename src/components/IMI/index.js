@@ -16,7 +16,7 @@ function shuffle (arr) {
     return arr;
 }
 
-function IMI({previousStep, changeData, task}) {
+function IMI({previousStep, changeData, task, loading}) {
   const [currentTask, setCurrentTask] = useState('_____________');
   const questions = [
     `Ao ${currentTask}, eu pensava no quanto havia gostado disso.`,
@@ -141,7 +141,7 @@ function IMI({previousStep, changeData, task}) {
             </Col>
           )}
           <Col md={2} sm={4} xs={6}>
-            <Button onClick={handleSubmit}>Enviar</Button>
+            <Button disabled={loading} onClick={handleSubmit}>Enviar</Button>
           </Col>
         </Row>
     </div>
