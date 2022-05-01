@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import {ToastContainer} from 'react-toastify';
+import {ToastContainer, toast} from 'react-toastify';
 import {Row, Col} from 'reactstrap';
 import Intro from "./components/Intro";
 import TCLE from "./components/TCLE";
@@ -9,6 +9,8 @@ import CheckPortuguese from "./components/CheckPortuguese";
 import TaskDefinition from "./components/TaskDefinition";
 import IMI from "./components/IMI";
 import Thanks from "./components/Thanks";
+
+import {newAnswer} from "./services";
 
 import './global.css';
 
@@ -37,7 +39,14 @@ function App() {
   }
 
   async function handleSubmit() {
-    console.log(payload);
+    try {
+      await newAnswer({
+        ...payload,
+        tipo: 'motivante',
+      });
+    } catch (err) {
+      toast.error(err.message);
+    }
   }
 
   function renderCurrentComponent() {
