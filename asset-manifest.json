@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/imi-motivante/static/css/main.4b849351.css",
-    "main.js": "/imi-motivante/static/js/main.e5c6ae5d.js",
+    "main.js": "/imi-motivante/static/js/main.e1045991.js",
     "index.html": "/imi-motivante/index.html",
     "main.4b849351.css.map": "/imi-motivante/static/css/main.4b849351.css.map",
-    "main.e5c6ae5d.js.map": "/imi-motivante/static/js/main.e5c6ae5d.js.map"
+    "main.e1045991.js.map": "/imi-motivante/static/js/main.e1045991.js.map"
   },
   "entrypoints": [
     "static/css/main.4b849351.css",
-    "static/js/main.e5c6ae5d.js"
+    "static/js/main.e1045991.js"
   ]
 }
